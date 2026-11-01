@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System | Toolkit</title>
+  <meta name="description" content="Toolkit design system: colors, typography, spacing and reusable UI components.">
+  <meta property="og:title" content="Design System | Toolkit">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <style>
+    /* Style-guide-only helpers */
+    .swatch { display: grid; gap: .5rem; font-size: var(--text-xs); color: var(--text-muted); }
+    .swatch i { display: block; height: 56px; border-radius: var(--r-sm); border: 1px solid var(--border); }
+    .demo { padding: var(--sp-5); border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); }
+    .space-bar { height: 12px; background: var(--accent); border-radius: 3px; }
+    .radius-box { width: 72px; height: 72px; border: 1.5px solid var(--accent); background: var(--accent-soft); }
+    .type-row { display: grid; grid-template-columns: 110px 1fr; gap: var(--sp-4); align-items: baseline; padding-block: var(--sp-3); border-bottom: 1px solid var(--border); }
+    .type-row small { color: var(--text-faint); }
+    @media (max-width: 560px) { .type-row { grid-template-columns: 1fr; gap: 2px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="styleguide.html"><img src="assets/img/logo.svg" alt="" width="28" height="28">Toolkit</a>
+      <span class="header__spacer"></span>
+      <span class="badge badge--demo">Style guide</span>
+      <button class="btn btn--ghost btn--icon" type="button" data-theme-toggle aria-label="Toggle theme"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container stack">
+        <h1>Design system</h1>
+        <p class="muted" style="max-width:60ch">Tokens and components every page is built from. Change a token in <code>tokens.css</code> and the whole site follows. Use the sun/moon button to check dark mode.</p>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="colors">
+      <div class="container">
+        <div class="section__head"><h2>Color</h2><p>One accent, neutral grays, and three status colors. Each has a light and dark value.</p></div>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(130px,1fr))">
+          <div class="swatch"><i style="background:var(--bg)"></i>Background</div>
+          <div class="swatch"><i style="background:var(--bg-subtle)"></i>Subtle</div>
+          <div class="swatch"><i style="background:var(--surface)"></i>Surface</div>
+          <div class="swatch"><i style="background:var(--border)"></i>Border</div>
+          <div class="swatch"><i style="background:var(--text)"></i>Text</div>
+          <div class="swatch"><i style="background:var(--text-muted)"></i>Muted text</div>
+          <div class="swatch"><i style="background:var(--accent)"></i>Accent</div>
+          <div class="swatch"><i style="background:var(--accent-soft)"></i>Accent soft</div>
+          <div class="swatch"><i style="background:var(--success)"></i>Success</div>
+          <div class="swatch"><i style="background:var(--warn)"></i>Warning</div>
+          <div class="swatch"><i style="background:var(--danger)"></i>Danger</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="type">
+      <div class="container">
+        <div class="section__head"><h2>Typography</h2><p>Inter with a system fallback. Three weights: 400, 500, 600.</p></div>
+        <div>
+          <div class="type-row"><small>Heading 1</small><h1>Powerful free online tools</h1></div>
+          <div class="type-row"><small>Heading 2</small><h2>Popular tools</h2></div>
+          <div class="type-row"><small>Heading 3</small><h3>Compress a PDF</h3></div>
+          <div class="type-row"><small>Body</small><p>Everything you need, in one place. Fast, private and free to use.</p></div>
+          <div class="type-row"><small>Small</small><p style="font-size:var(--text-sm)" class="muted">Files stay in your browser and are never uploaded.</p></div>
+          <div class="type-row"><small>Code</small><code>{ "tool": "json-formatter" }</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="spacing">
+      <div class="container">
+        <div class="section__head"><h2>Spacing and radius</h2><p>A 4px base scale. Two radii for controls and cards, plus a pill.</p></div>
+        <div class="stack" style="max-width:420px">
+          <div class="row"><code style="width:60px">sp-2</code><div class="space-bar" style="width:var(--sp-2)"></div></div>
+          <div class="row"><code style="width:60px">sp-4</code><div class="space-bar" style="width:var(--sp-4)"></div></div>
+          <div class="row"><code style="width:60px">sp-5</code><div class="space-bar" style="width:var(--sp-5)"></div></div>
+          <div class="row"><code style="width:60px">sp-6</code><div class="space-bar" style="width:var(--sp-6)"></div></div>
+          <div class="row"><code style="width:60px">sp-7</code><div class="space-bar" style="width:var(--sp-7)"></div></div>
+        </div>
+        <div class="row" style="margin-top:var(--sp-5);gap:var(--sp-5)">
+          <div class="radius-box" style="border-radius:var(--r-sm)"></div>
+          <div class="radius-box" style="border-radius:var(--r-md)"></div>
+          <div class="radius-box" style="border-radius:var(--r-pill)"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buttons">
+      <div class="container stack">
+        <div class="section__head"><h2>Buttons and badges</h2></div>
+        <div class="row">
+          <button class="btn btn--primary" type="button">Compress PDF</button>
+          <button class="btn btn--secondary" type="button">Browse tools</button>
+          <button class="btn btn--ghost" type="button">Cancel</button>
+          <button class="btn btn--primary" type="button" disabled>Disabled</button>
+          <button class="btn btn--primary btn--lg" type="button">Get started</button>
+        </div>
+        <div class="row">
+          <span class="badge">PDF Tools</span>
+          <span class="badge badge--new">New</span>
+          <span class="badge badge--demo">Demo only</span>
+          <button class="pill" type="button" aria-pressed="false" data-toggle-pill>QR codes</button>
+          <button class="pill" type="button" aria-pressed="true" data-toggle-pill>Images</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="forms">
+      <div class="container">
+        <div class="section__head"><h2>Search and form fields</h2></div>
+        <div class="stack" style="max-width:640px">
+          <div class="search">
+            <div class="search__box">
+              <span data-icon="search"></span>
+              <input class="search__input" type="search" placeholder="Search 50 tools" aria-label="Search tools" id="demo-search" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="demo-list">
+            </div>
+            <ul class="search__list" id="demo-list" role="listbox" hidden>
+              <li class="search__item" role="option" aria-selected="true"><span class="icon-tile" data-icon="file"></span>PDF Compressor<small>PDF Tools</small></li>
+              <li class="search__item" role="option"><span class="icon-tile" data-icon="image"></span>Image Compressor<small>Image Tools</small></li>
+              <li class="search__item" role="option"><span class="icon-tile" data-icon="qr"></span>QR Code Generator<small>QR &amp; Barcode</small></li>
+            </ul>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+            <div class="field"><label class="field__label" for="f-url">Website address</label><input class="input" id="f-url" type="url" placeholder="https://example.com"><span class="field__hint">We never store what you enter.</span></div>
+            <div class="field"><label class="field__label" for="f-q">Quality</label><select class="select" id="f-q"><option>High</option><option>Medium</option><option>Small file</option></select></div>
+          </div>
+          <div class="field"><label class="field__label" for="f-t">Text</label><textarea class="textarea" id="f-t" placeholder="Paste your text here"></textarea></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cards">
+      <div class="container">
+        <div class="section__head"><h2>Tool card</h2><p>The card is a single link. It lifts slightly on hover and shows an open cue.</p></div>
+        <div class="grid">
+          <a class="tool-card" href="#cards"><div class="tool-card__top"><span class="icon-tile" data-icon="file" data-size="22"></span><span class="badge badge--new">New</span></div><div><h3 class="tool-card__title">PDF Compressor</h3><p class="tool-card__desc">Reduce PDF file size while keeping text sharp.</p></div><div class="tool-card__meta"><span>PDF Tools</span><span class="tool-card__open">Open tool</span></div></a>
+          <a class="tool-card" href="#cards"><div class="tool-card__top"><span class="icon-tile" data-icon="image" data-size="22"></span></div><div><h3 class="tool-card__title">Image Resizer</h3><p class="tool-card__desc">Change image dimensions for web, print or social media.</p></div><div class="tool-card__meta"><span>Image Tools</span><span class="tool-card__open">Open tool</span></div></a>
+          <a class="tool-card" href="#cards"><div class="tool-card__top"><span class="icon-tile" data-icon="code" data-size="22"></span></div><div><h3 class="tool-card__title">JSON Formatter</h3><p class="tool-card__desc">Format, validate and minify JSON in one step.</p></div><div class="tool-card__meta"><span>Developer Tools</span><span class="tool-card__open">Open tool</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="interactive">
+      <div class="container stack">
+        <div class="section__head"><h2>Tabs, accordion, dropdown</h2></div>
+
+        <div class="demo" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Output format">
+            <button class="tabs__tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">Formatted</button>
+            <button class="tabs__tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Minified</button>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="p1" aria-labelledby="t1"><pre id="sample-out" style="margin:0 0 var(--sp-3)"><code>{ "name": "Toolkit", "tools": 50 }</code></pre><button class="btn btn--secondary" type="button" data-copy="#sample-out"><span data-icon="copy" data-size="16"></span>Copy</button></div>
+          <div class="tabs__panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><p class="muted">Minified output appears here.</p></div>
+        </div>
+
+        <div class="accordion">
+          <details open><summary>Are the tools free?</summary><div class="accordion__body">Yes. Every tool on this site is free to use, and none require an account.</div></details>
+          <details><summary>Do my files leave my device?</summary><div class="accordion__body">Tools are designed to run in your browser. Each tool page states clearly how it handles your data.</div></details>
+        </div>
+
+        <div class="row">
+          <div class="dropdown">
+            <button class="btn btn--secondary" type="button" aria-haspopup="true" aria-expanded="false">Categories <span data-icon="chevron" data-size="16"></span></button>
+            <div class="dropdown__menu">
+              <a class="dropdown__item" href="#interactive"><span data-icon="file" data-size="18"></span>PDF Tools</a>
+              <a class="dropdown__item" href="#interactive"><span data-icon="image" data-size="18"></span>Image Tools</a>
+              <a class="dropdown__item" href="#interactive"><span data-icon="calc" data-size="18"></span>Calculators</a>
+            </div>
+          </div>
+          <button class="btn btn--secondary" type="button" id="toast-btn">Show toast</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="upload">
+      <div class="container stack" style="max-width:720px">
+        <div class="section__head"><h2>Dropzone and demo notice</h2></div>
+        <div class="notice"><span data-icon="info" data-size="18"></span><p>Demo interface. Files you add are listed here for preview only. Nothing is uploaded or processed yet.</p></div>
+        <div class="dropzone" data-dropzone="#file-list" tabindex="0" role="button" aria-label="Choose files or drag them here">
+          <span class="icon-tile" data-icon="upload" data-size="22"></span>
+          <p class="dropzone__title">Drop files here or click to browse</p>
+          <p class="dropzone__hint">PDF, up to 50 MB</p>
+          <input type="file" class="sr-only" multiple tabindex="-1" aria-hidden="true">
+        </div>
+        <div class="stack" id="file-list" aria-live="polite"></div>
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="styleguide.html">Home</a></li><li><a href="#upload">PDF Tools</a></li><li aria-current="page">PDF Compressor</li></ol></nav>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script>
+    /* Style-guide demos only */
+    document.querySelectorAll("[data-toggle-pill]").forEach(p => p.addEventListener("click", () => p.setAttribute("aria-pressed", p.getAttribute("aria-pressed") !== "true")));
+    document.getElementById("toast-btn").addEventListener("click", () => UI.toast("Settings saved"));
+    const s = document.getElementById("demo-search"), l = document.getElementById("demo-list");
+    const toggle = open => { l.hidden = !open; s.setAttribute("aria-expanded", open); };
+    s.addEventListener("focus", () => toggle(true));
+    document.addEventListener("click", e => { if (!e.target.closest(".search")) toggle(false); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Toolkit</title>
+  <meta name="description" content="Send feedback, report a problem or suggest a new tool.">
+  <meta property="og:title" content="Contact Us | Toolkit">
+  <meta property="og:description" content="Send feedback, report a problem or suggest a new tool.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>try{var t=localStorage.getItem("toolkit:theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  
+</head>
+<body data-root="" data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <div class="container" style="padding-bottom:var(--sp-8)">
+      <div class="page-head" style="padding-inline:0">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Contact us</li></ol></nav>
+        <h1>Contact us</h1><p>Report a problem, share feedback or suggest a tool.</p>
+      </div>
+      <div class="notice"><span data-icon="info" data-size="18"></span><p>Interface preview. This form doesn't send messages yet.</p></div><div style="margin-top:var(--sp-5)"><form class="contact-form" id="contact-form">
+        <div class="field"><label class="field__label" for="c-name">Name</label><input class="input" id="c-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label class="field__label" for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label class="field__label" for="c-topic">Topic</label><select class="select" id="c-topic" name="topic"><option>Feedback</option><option>Report a problem</option><option>Suggest a tool</option><option>Other</option></select></div>
+        <div class="field"><label class="field__label" for="c-msg">Message</label><textarea class="textarea" id="c-msg" name="message" required style="font-family:var(--font-sans);font-size:var(--text-base)"></textarea></div>
+        <div><button class="btn btn--primary btn--lg" type="submit">Send message</button></div>
+      </form></div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data/tools.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

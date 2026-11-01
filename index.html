@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toolkit | Free Online Tools for PDF, Images, QR Codes and More</title>
+  <meta name="description" content="Free online tools for everyday tasks: compress PDFs and images, make QR codes, count words, format JSON and more. No sign-up required.">
+  <meta property="og:title" content="Toolkit | Free Online Tools for Everyday Tasks">
+  <meta property="og:description" content="50 free online tools for PDFs, images, QR codes, calculators, text and developers. Everything You Need. One Place.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>try{var t=localStorage.getItem("toolkit:theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Toolkit","description":"Free online tools for everyday tasks."}</script>
+</head>
+<body data-root="" data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <h1 id="hero-title">Powerful Free Online Tools for Everyday Tasks</h1>
+        <p class="hero__lead">Compress files, make QR codes, count words, format code and more. Everything You Need. One Place.</p>
+        <div class="search">
+          <div class="search__box">
+            <span data-icon="search"></span>
+            <input class="search__input" id="hero-search" type="search" placeholder="Search 50 tools, like “compress PDF”" aria-label="Search tools" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="hero-list" aria-autocomplete="list">
+            <span class="kbd" aria-hidden="true">/</span>
+          </div>
+          <ul class="search__list" id="hero-list" role="listbox" aria-label="Search suggestions" hidden></ul>
+        </div>
+        <div class="hero__keywords"><span>Popular:</span><span id="keywords" class="row" style="gap:.5rem"></span></div>
+        <a class="btn btn--primary btn--lg" href="tools/index.html">Browse all tools</a>
+      </div>
+    </section>
+
+    <div class="container"><div class="notice"><span data-icon="info" data-size="18"></span><p>Preview build. The tool pages are interface demos and do not process files yet.</p></div></div>
+
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__bar"><div class="section__head"><h2 id="popular-title">Popular tools</h2><p>The tools people reach for most.</p></div>
+          <a class="btn btn--secondary" href="tools/index.html?sort=popular">View all tools</a></div>
+        <div class="grid" id="popular-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="used" aria-labelledby="used-title" hidden>
+      <div class="container">
+        <div class="section__head"><h2 id="used-title">Recently used</h2><p>Pick up where you left off.</p></div>
+        <div class="grid" id="used-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="categories" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section__head"><h2 id="cat-title">Browse by category</h2><p>50 tools across eight categories.</p></div>
+        <div class="grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section__head"><h2 id="why-title">Why choose Toolkit</h2></div>
+        <div class="benefits">
+          <div class="benefit"><span class="icon-tile" data-icon="gift"></span><div><h3>Free to use</h3><p>Our tools are free where applicable, with no hidden paywalls on the basics.</p></div></div>
+          <div class="benefit"><span class="icon-tile" data-icon="user"></span><div><h3>No registration</h3><p>Open a tool and start. You never need an account.</p></div></div>
+          <div class="benefit"><span class="icon-tile" data-icon="zap"></span><div><h3>Fast processing</h3><p>Lightweight pages that load quickly, even on slower connections.</p></div></div>
+          <div class="benefit"><span class="icon-tile" data-icon="shield"></span><div><h3>Privacy-focused</h3><p>Built to keep your files on your device wherever a tool allows it.</p></div></div>
+          <div class="benefit"><span class="icon-tile" data-icon="phone"></span><div><h3>Mobile-friendly</h3><p>Every tool is laid out to work comfortably on a phone.</p></div></div>
+          <div class="benefit"><span class="icon-tile" data-icon="layers"></span><div><h3>Simple interface</h3><p>One task per page, clear controls and no clutter.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="new" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section__head"><h2 id="new-title">Recently added</h2><p>The newest tools in the collection.</p></div>
+        <div class="grid" id="new-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--subtle" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="section__head"><h2 id="faq-title">Frequently asked questions</h2></div>
+        <div class="accordion">
+          <details open><summary>Are the tools really free?</summary><div class="accordion__body">Yes. You can use our tools without paying, and none of them require you to create an account.</div></details>
+          <details><summary>Do I need to sign up?</summary><div class="accordion__body">No. Open any tool and use it right away.</div></details>
+          <details><summary>Are my files safe?</summary><div class="accordion__body">We design tools to work in your browser so your files stay on your device where possible. Each tool page explains how it handles your data.</div></details>
+          <details><summary>Does it work on my phone?</summary><div class="accordion__body">Yes. Every page is designed for phones, tablets and desktops.</div></details>
+          <details><summary>Can I suggest a new tool?</summary><div class="accordion__body">Yes. Use the Contact Us page and tell us what you need.</div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data/tools.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/cards.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
