@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EXIF Data Viewer | Free Online Tool | Toolkit</title>
+  <meta name="description" content="See camera and location details stored in a photo. Free, fast and no sign-up needed.">
+  <meta property="og:title" content="EXIF Data Viewer | Free Online Tool | Toolkit">
+  <meta property="og:description" content="See camera and location details stored in a photo. Free, fast and no sign-up needed.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <script>try{var t=localStorage.getItem("toolkit:theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"EXIF Data Viewer","description":"See camera and location details stored in a photo.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"../index.html"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"../categories/image-tools.html"},{"@type":"ListItem","position":3,"name":"EXIF Data Viewer","item":"exif-viewer.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the EXIF Data Viewer do?","acceptedAnswer":{"@type":"Answer","text":"See camera and location details stored in a photo."}},{"@type":"Question","name":"Is the EXIF Data Viewer free?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can use it without paying or creating an account."}},{"@type":"Question","name":"Are my files uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"Toolkit tools are designed to run in your browser, so your content can stay on your device. This page is currently an interface preview and does not process anything."}},{"@type":"Question","name":"Does it work on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. The page is designed for phones, tablets and computers."}}]}]}</script>
+</head>
+<body data-root="../" data-page="tool" data-tool="exif-viewer" data-mode="file">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <div class="container tool-page">
+      <div class="page-head" style="padding-inline:0">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../index.html">Home</a></li><li><a href="../categories/image-tools.html">Image Tools</a></li><li aria-current="page">EXIF Data Viewer</li></ol></nav>
+        <div class="row" style="gap:1rem;align-items:flex-start;flex-wrap:nowrap"><span class="icon-tile" style="width:48px;height:48px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+          <div><h1>EXIF Data Viewer</h1><p>See camera and location details stored in a photo.</p></div></div>
+      </div>
+
+      <div class="notice"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><p>Interface preview. This tool doesn't process anything yet, and the result area stays empty.</p></div>
+
+      <section class="workspace" aria-label="EXIF Data Viewer workspace">
+      <div class="dropzone" data-dropzone="#file-list" tabindex="0" role="button" aria-label="Choose files or drag them here">
+        <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span>
+        <p class="dropzone__title">Drop a file here or click to browse</p>
+        <p class="dropzone__hint">One JPG photo</p>
+        <input type="file" class="sr-only" accept="image/jpeg" tabindex="-1" aria-hidden="true">
+      </div>
+      <div class="stack" id="file-list" aria-live="polite"></div>
+        
+        <div class="row"><button class="btn btn--primary btn--lg" type="button" id="run-btn">Read EXIF data</button><button class="btn btn--ghost" type="button" id="reset-btn">Reset</button></div>
+      <div class="result" aria-live="polite">
+        <div class="result__head"><h2>Photo metadata</h2>
+          <div class="row" style="gap:.5rem">
+            <button class="btn btn--secondary" type="button" disabled data-copy="#result-text"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg>Copy</button>
+            <button class="btn btn--secondary" type="button" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0 5-5m-5 5-5-5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Download</button>
+          </div></div>
+        <dl class="stats" id="result-text"><div><dt>Result</dt><dd>&mdash;</dd></div></dl>
+        <p class="result__note"><span class="badge badge--demo">Preview</span> No result is produced yet. Processing isn't connected.</p>
+      </div>
+      </section>
+
+      <div class="content-grid">
+        <section aria-labelledby="how-title"><h2 id="how-title">How to use the EXIF Data Viewer</h2>
+          <ol class="steps"><li>Add your file by dragging it into the upload area or choosing from your device.</li><li>Review the settings and change anything you need.</li><li>Select “Read EXIF data”.</li><li>Copy or download the result when it is ready.</li></ol></section>
+        <section aria-labelledby="feat-title"><h2 id="feat-title">Features and benefits</h2>
+          <ul class="features"><li><span class="features__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.500 4.500 4.500L19 7.500"/></svg></span><div><h3>Free to use</h3><p>No account and no payment needed.</p></div></li><li><span class="features__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.500 4.500 4.500L19 7.500"/></svg></span><div><h3>Simple settings</h3><p>Sensible defaults with the options you actually need.</p></div></li><li><span class="features__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.500 4.500 4.500L19 7.500"/></svg></span><div><h3>Works on any device</h3><p>A layout that fits phones, tablets and desktops.</p></div></li><li><span class="features__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.500 4.500 4.500L19 7.500"/></svg></span><div><h3>Built for privacy</h3><p>Designed to work in your browser so files can stay on your device.</p></div></li></ul></section>
+      </div>
+
+      <section class="faq-block" aria-labelledby="faq-title"><h2 id="faq-title">Frequently asked questions</h2>
+        <div class="accordion"><details open><summary>What does the EXIF Data Viewer do?</summary><div class="accordion__body">See camera and location details stored in a photo.</div></details><details><summary>Is the EXIF Data Viewer free?</summary><div class="accordion__body">Yes. You can use it without paying or creating an account.</div></details><details><summary>Are my files uploaded to a server?</summary><div class="accordion__body">Toolkit tools are designed to run in your browser, so your content can stay on your device. This page is currently an interface preview and does not process anything.</div></details><details><summary>Does it work on my phone?</summary><div class="accordion__body">Yes. The page is designed for phones, tablets and computers.</div></details></div></section>
+
+      <section aria-labelledby="rel-title" style="padding-bottom:var(--sp-8)"><h2 id="rel-title" style="margin-bottom:var(--sp-4)">Related tools</h2>
+        <div class="grid">
+    <a class="tool-card" href="../tool/image-compressor.html">
+      <div class="tool-card__top"><span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m21 16-5-5-8 8"/></svg></span></div>
+      <div><h3 class="tool-card__title">Image Compressor</h3><p class="tool-card__desc">Shrink JPG, PNG and WebP files with little quality loss.</p></div>
+      <div class="tool-card__meta"><span>Image Tools</span><span class="tool-card__open">Open tool</span></div>
+    </a>
+    <a class="tool-card" href="../tool/image-resizer.html">
+      <div class="tool-card__top"><span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m21 16-5-5-8 8"/></svg></span></div>
+      <div><h3 class="tool-card__title">Image Resizer</h3><p class="tool-card__desc">Change image dimensions for web, print or social media.</p></div>
+      <div class="tool-card__meta"><span>Image Tools</span><span class="tool-card__open">Open tool</span></div>
+    </a>
+    <a class="tool-card" href="../tool/image-converter.html">
+      <div class="tool-card__top"><span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4 3 8l4 4M3 8h14M17 20l4-4-4-4m4 4H7"/></svg></span></div>
+      <div><h3 class="tool-card__title">Image Converter</h3><p class="tool-card__desc">Convert between JPG, PNG and WebP formats.</p></div>
+      <div class="tool-card__meta"><span>Image Tools</span><span class="tool-card__open">Open tool</span></div>
+    </a>
+    <a class="tool-card" href="../tool/image-cropper.html">
+      <div class="tool-card__top"><span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="m8.500 8 11 9M8.500 16l11-9"/></svg></span></div>
+      <div><h3 class="tool-card__title">Image Cropper</h3><p class="tool-card__desc">Crop an image to a custom or preset aspect ratio.</p></div>
+      <div class="tool-card__meta"><span>Image Tools</span><span class="tool-card__open">Open tool</span></div>
+    </a></div></section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/data/tools.js"></script>
+  <script src="../assets/js/storage.js"></script>
+  <script src="../assets/js/layout.js"></script>
+  <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/tool.js"></script>
+</body>
+</html>
