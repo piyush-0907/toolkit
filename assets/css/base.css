@@ -1,0 +1,37 @@
+/* Reset + base elements + layout helpers */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+body {
+  margin: 0; font-family: var(--font-sans); font-size: var(--text-base); line-height: 1.6;
+  color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { margin: 0; line-height: 1.2; letter-spacing: -.02em; font-weight: 600; }
+h1 { font-size: var(--text-3xl); letter-spacing: -.03em; }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-lg); letter-spacing: -.01em; }
+p { margin: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--r-sm); }
+code, kbd { font-family: var(--font-mono); font-size: .9em; }
+
+.container { width: min(100% - 2rem, var(--container)); margin-inline: auto; }
+.section { padding-block: var(--sp-8); }
+.section--subtle { background: var(--bg-subtle); border-block: 1px solid var(--border); }
+.section__head { margin-bottom: var(--sp-6); max-width: 60ch; }
+.section__head p { color: var(--text-muted); margin-top: var(--sp-2); }
+.stack > * + * { margin-top: var(--sp-4); }
+.row { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center; }
+.grid { display: grid; gap: var(--sp-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.muted { color: var(--text-muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-link { position: absolute; left: -999px; top: 8px; background: var(--accent); color: var(--accent-text); padding: .5rem 1rem; border-radius: var(--r-sm); z-index: 100; }
+.skip-link:focus { left: 8px; }
+
+@media (max-width: 640px) { .section { padding-block: var(--sp-7); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

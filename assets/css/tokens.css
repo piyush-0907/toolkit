@@ -1,0 +1,65 @@
+/* Toolkit design tokens. Change brand colors here only. */
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --text-xs: .8125rem; --text-sm: .875rem; --text-base: 1rem; --text-lg: 1.125rem;
+  --text-xl: 1.375rem; --text-2xl: 1.75rem; --text-3xl: clamp(1.9rem, 4vw + .5rem, 2.75rem);
+
+  /* Spacing (4px base) */
+  --sp-1: .25rem; --sp-2: .5rem; --sp-3: .75rem; --sp-4: 1rem; --sp-5: 1.5rem;
+  --sp-6: 2rem; --sp-7: 3rem; --sp-8: 5rem;
+
+  /* Radius */
+  --r-sm: 8px; --r-md: 12px; --r-pill: 999px;
+
+  /* Motion */
+  --ease: cubic-bezier(.2,.7,.2,1); --t-fast: 150ms; --t-med: 220ms;
+
+  /* Layout */
+  --container: 1120px; --header-h: 64px;
+
+  /* Light theme (default) */
+  --bg: #ffffff;
+  --bg-subtle: #f7f7f8;
+  --surface: #ffffff;
+  --border: #e6e6ea;
+  --border-strong: #d2d2d9;
+  --text: #16161a;
+  --text-muted: #5b5b66;
+  --text-faint: #8a8a96;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-soft: #eef0ff;
+  --accent-text: #ffffff;
+  --success: #15803d; --success-soft: #e8f6ee;
+  --warn: #b45309; --warn-soft: #fdf3e3;
+  --danger: #b91c1c; --danger-soft: #fdecec;
+  --shadow-sm: 0 1px 2px rgba(22,22,26,.05);
+  --shadow-md: 0 8px 24px -8px rgba(22,22,26,.14), 0 2px 6px rgba(22,22,26,.05);
+  --focus: 0 0 0 3px rgba(79,70,229,.35);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e0e11;
+  --bg-subtle: #141418;
+  --surface: #17171c;
+  --border: #26262d;
+  --border-strong: #34343d;
+  --text: #f1f1f4;
+  --text-muted: #a3a3b0;
+  --text-faint: #75757f;
+  --accent: #818cf8;
+  --accent-hover: #a5b0fb;
+  --accent-soft: #1f2040;
+  --accent-text: #0e0e11;
+  --success: #4ade80; --success-soft: #11261a;
+  --warn: #fbbf24; --warn-soft: #2a2010;
+  --danger: #f87171; --danger-soft: #2c1414;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 10px 30px -10px rgba(0,0,0,.7);
+  --focus: 0 0 0 3px rgba(129,140,248,.45);
+  color-scheme: dark;
+}
