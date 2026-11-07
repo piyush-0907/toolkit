@@ -20,7 +20,10 @@
   });
 
   $("reset-btn").addEventListener("click", () => {
-    document.querySelectorAll(".workspace input:not([type=file]):not([type=checkbox]):not([type=color]), .workspace textarea:not([readonly])").forEach(el => { el.value = el.defaultValue; });
-    if (mode === "file") { $("file-list").replaceChildren(); document.querySelector("input[type=file]").value = ""; }
+    const ws = document.querySelector(".workspace");
+    ws.querySelectorAll("input:not([type=file]):not([type=checkbox]), textarea:not([readonly])").forEach(el => { el.value = el.defaultValue; });
+    ws.querySelectorAll("input[type=checkbox]").forEach(el => { el.checked = el.defaultChecked; });
+    ws.querySelectorAll("select").forEach(el => { el.selectedIndex = Math.max(0, [...el.options].findIndex(o => o.defaultSelected)); });
+    if (mode === "file") { $("file-list").replaceChildren(); ws.querySelector("input[type=file]").value = ""; }
   });
 })();
