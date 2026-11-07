@@ -116,3 +116,10 @@
 .contact-form { display: grid; gap: var(--sp-4); max-width: 560px; padding: var(--sp-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); }
 .notfound { min-height: 60vh; display: grid; place-content: center; justify-items: center; gap: var(--sp-4); text-align: center; padding-block: var(--sp-8); }
 .notfound .search { width: min(100%, 520px); text-align: left; }
+
+@media (pointer: coarse) {
+  .kbd { display: none; }
+  .footer ul { gap: .25rem; }
+  .footer li a { display: inline-block; padding-block: .5rem; }
+  .textarea--lg { min-height: 180px; }
+}

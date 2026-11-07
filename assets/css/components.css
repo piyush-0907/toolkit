@@ -140,3 +140,14 @@
 .brand:hover { text-decoration: none; }
 .brand img { width: 28px; height: 28px; }
 .header__spacer { flex: 1; }
+
+/* Touch devices */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .btn--icon { width: 44px; height: 44px; }
+  .pill { min-height: 40px; padding-inline: .875rem; }
+  .input, .select, .textarea { font-size: 16px; min-height: 44px; }
+  .textarea { min-height: 120px; }
+  .check { min-height: 44px; }
+  .dropdown__item { min-height: 44px; }
+}
