@@ -38,7 +38,7 @@ const input = s => {
 
 const result = s => {
   const body = s.outKind === "text"
-    ? `<textarea class="textarea" id="result-text" readonly placeholder="Your ${esc(s.out.toLowerCase())} will appear here."></textarea>`
+    ? `<textarea class="textarea" id="result-text" readonly aria-label="${esc(s.out)}" placeholder="Your ${esc(s.out.toLowerCase())} will appear here."></textarea>`
     : s.outKind === "stats"
       ? `<dl class="stats" id="result-text">${(s.stats || ["Result"]).map(k => `<div><dt>${esc(k)}</dt><dd>&mdash;</dd></div>`).join("")}</dl>`
       : `<div class="result__empty" id="result-text">Your ${esc(s.out.toLowerCase())} will appear here.</div>`;
